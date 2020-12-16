@@ -1,12 +1,24 @@
-// 作品詳細 オーバーレイ表示
+
 	$(function(){
 
 		$('.JS_Click_Trigger').on('click', function(){
-		  $('.OverLayer').addClass('isShow');
-		});
-
-		$('.OverLayer-Mask').on('click', function(){
-		  $('.OverLayer').removeClass('isShow');
+			$('.OverLayer').addClass('isShow');
+			
+			$('body').css({overflow: 'hidden'});
 		});
 		
+		
+
+		$('.OverLayer-Mask').on('click', function(){
+			$('.OverLayer').removeClass('isShow');
+			
+			$('body').css({overflow: ''});
+		});
+		
+		
+
 	});
+
+
+
+
