@@ -174,7 +174,7 @@ ul.W-Info li img {
   top: 50%;
   left: 50%;
 	width: 85%;
-	height: 80%;
+	height: 40%;
   transform: translate(-50%, -50%);
 }
 
@@ -236,6 +236,7 @@ ul.W-Info li img {
 
 .movtext-pdg2 .title {
 	font-size: 1.5rem;
+	line-height: 1.7rem;;
 	font-weight: bold;
 }
 
