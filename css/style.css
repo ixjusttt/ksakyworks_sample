@@ -18,7 +18,6 @@ a:hover {
 	color: #BBBBBB;
 }
 
-
 /* ヘッダー */
 #mainWrapper {
 	width: 80%;
@@ -96,6 +95,7 @@ header > .title h2 {
 
 
 /* 作品一覧 */
+
 .contents {
 	width: 100%;
 	justify-content: space-between;
@@ -215,15 +215,26 @@ ul.W-Info li img {
 	margin: 30px 0px;
 }
 
-.movtext p {
-	margin: 0px;
+.movtext-pdg2 .artist {
+	font-size: 1rem;
+	font-weight: bold;
 }
 
-.movtext-pdg {
+.movtext-pdg p {
+	margin: 0px;
+	margin-top: 5px;
+}
+
+.movtext-pdg2 p {
+	margin: 0px;
+	margin-bottom: 15px;
+}
+
+.movtext-pdg, .movtext-pdg2 {
 	padding-left: 40px;
 }
 
-.movtext-pdg .title {
+.movtext-pdg2 .title {
 	font-size: 1.5rem;
 	font-weight: bold;
 }
@@ -255,6 +266,7 @@ ul.W-Info li img {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 25px 0px;
+	line-height: 1.3rem;
 }
 
 .movtext dt {
