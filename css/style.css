@@ -96,12 +96,13 @@ header > .title h2 {
 
 /* ディスコグラフィ */
 #Discography {
-	width: 100%;
+	width: 80%;
+	margin: 0px auto;
 	padding-top: 30px;
 }
 
 .Disco-wrapper {
-	padding: 50px;
+	padding: 40px;
 	background-color: #F7F7F7;
 	border-radius: 10px;
 	font-size: .8rem;
@@ -109,14 +110,19 @@ header > .title h2 {
 }
 
 .Disco-Inner{
-	width: 80%;
+	width: 95%;
 	display: flex;
 	justify-content: space-between;
-	margin: 0px auto;
+	margin: 20px auto 0px;
 }
 
-.Disco-Inner .mov, .Disco-Inner .movtext {
-	width: 50%;
+.Disco-Inner .mov {
+	width: 60%;
+	margin: 0px;
+}
+
+.Disco-Inner .movtext {
+	width: 40%;
 	margin: 0px;
 }
 
@@ -180,10 +186,10 @@ header > .title h2 {
 	width: 90%;
 	display: flex;
 	justify-content: space-between;
-	padding: 15px 40px;
+	padding: 15px 20px;
 	margin: 0px auto;
 	background-color: #fff;
-	border: 1px solid #EAEAEA;
+	/* border: 1px solid #EAEAEA; */
 	border-radius: 10px;
 }
 
@@ -345,7 +351,7 @@ ul.W-Info li img {
 }
 
 .movtext-pdg, .movtext-pdg2 {
-	padding-left: 40px;
+	padding-left: 25px;
 }
 
 .movtext-pdg2 .title {
@@ -381,16 +387,19 @@ ul.W-Info li img {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 25px 0px;
+	font-size: .7rem;
 	line-height: 1.3rem;
 }
 
 .movtext dt {
-	width: 35%;
+	width: 40%;
+	overflow-wrap: break-word;
 }
 
 .movtext dd {
-	width: 65%;
+	width: 60%;
 	margin: 0px;
+	overflow-wrap: break-word;
 }
 
 
@@ -455,7 +464,7 @@ ul.W-Info li img {
 }
 
 .title h3 {
-	width: 70%;
+	width: 90%;
 	position: relative;
 }
 
@@ -655,6 +664,47 @@ button:hover{
 /* 768〜1079px */
 @media screen and (min-width:768px) and (max-width:1079px) {
 
+	#Discography {
+		width: 100%;
+		margin: 0px auto;
+		padding-top: 30px;
+	}
+	
+	.Disco-Inner {
+		width: 90%;
+		display: block;
+		margin: 0px auto;
+	}
+
+	.title-Inner {
+		width: 90%;
+		margin: 0px auto;
+	}
+	
+	.Disco-wrapper {
+		padding: 40px 20px;
+		margin: 0px auto;
+		background-color: #F7F7F7;
+		border-radius: 10px;
+		font-size: .8rem;
+		line-height: 1.2rem;
+	}
+	
+	.Disco-Inner .mov, .Disco-Inner .movtext {
+		width: 100%;
+		margin: 0px;
+	}
+
+	.Disco-wrapper .wrapper {
+		width: 90%;
+		display: flex;
+		justify-content: space-between;
+		padding: 15px 35px;
+		margin: 0px auto;
+		background-color: #fff;
+		border-radius: 10px;
+	}
+	
 	ul.W-Info li {
 		position: relative;
 		width: 30%;
@@ -668,6 +718,56 @@ button:hover{
 		font-size: 1.2rem;
 		margin: 0px;
 	}
+
+	.wrapper {
+		display: block;
+		padding: 30px;
+	}
+	
+	.mov {
+		width: 100%;
+		margin: 0px;
+	}
+	
+
+	.OverLayer-Inner {
+		position: absolute;
+		overflow-y: scroll;
+		width: 85%;
+		height: 90vh;
+		transform: translate(-50%, -50%);
+	}
+
+	.OverLayer-Inner .movtext {
+		width: 80%;
+		margin: 30px auto;
+	}
+
+	.OverLayer-Inner .movtext .uline {
+		border-bottom: 1px solid #808080;
+		margin: 15px 0px;
+ }
+
+	.OverLayer-Inner .movtext .button {
+		display: inline-block;
+		margin: 8px auto;
+		padding: 10px 70px; 
+		color: #fff;
+		text-decoration: none;
+		text-align: center;
+		border: solid 1px #808080;
+		border-radius: 5px;
+		font-size: 0.8rem;
+		-webkit-transition: all 0.1s;
+		transition: all 0.1s;
+	}
+
+	.OverLayer-Inner .movtext .button:hover{
+		background-color: #fff;
+		color:#808080;
+	}
+
+
 
 	.movtext .button {
 		display: inline-block;
@@ -731,6 +831,12 @@ button:hover{
 		display: none;
 }
 
+#Discography {
+	width: 100%;
+	margin: 0px auto;
+	padding-top: 30px;
+}
+
 .Disco-Inner{
 	width: 90%;
 	display: block;
@@ -751,7 +857,7 @@ button:hover{
 }
 
 .movtext-pdg, .movtext-pdg2 {
-	padding-left: 10px;
+	padding: 0px 20px 0px 20px;
 }
 
 .button-mq {
@@ -830,6 +936,11 @@ button:hover{
 		width: 80%;
 		margin: 30px auto;
 	}
+
+	.OverLayer-Inner .movtext .uline {
+		border-bottom: 1px solid #808080;
+		margin: 15px 0px;
+ }
 
 	.OverLayer-Inner .movtext .button {
 		display: inline-block;
