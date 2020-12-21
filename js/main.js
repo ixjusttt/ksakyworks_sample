@@ -163,6 +163,43 @@ $(function(){
 		$('body').css({overflow: ''});
 	});
 		
+	
+//	トップにゆっくり戻る
+	const topBtn = $('#page_top')
+	
+	topBtn.click(function(){
+		$('body,html').animate({
+			scrollTop: 0
+		},500);
+	});
+
+	
+//	プロフィールにゆっくり移動
+	let position = $('#Profile').offset().top;
+	
+	$('#prf').click(function(){
+		$('body,html').animate({
+			scrollTop: position
+		},500);
+	});
+	
+//	ワークスにゆっくり移動
+	let position2 = $('#Works').offset().top;
+	
+	$('#wks').click(function(){
+		$('body,html').animate({
+			scrollTop: position2
+		},500);
+	});
+	
+//	ディスコグラフィにゆっくり移動
+	let position3 = $('#Discography').offset().top;
+	
+	$('#dsc').click(function(){
+		$('body,html').animate({
+			scrollTop: position3
+		},500);
+	});
 
 
 });

@@ -20,7 +20,7 @@ a:hover {
 
 /* ヘッダー */
 #mainWrapper {
-	width: 80%;
+	width: 90%;
 	margin: 0px auto;
 }
 
@@ -35,6 +35,23 @@ header > .title h2 {
 }
 
 /* メニュー */
+
+#page_top {
+	position: fixed;
+	bottom: 18px;
+	right: 18px;
+	display: inline-block;
+	padding: 18px;
+	background-color: #333;
+	opacity: .7;
+	border-radius: 50%;
+}
+
+.fa-chevron-up {
+	color: #fff;
+}
+
+
 .menu {
 	display: flex;
 	justify-content: center;
@@ -96,7 +113,7 @@ header > .title h2 {
 
 /* ディスコグラフィ */
 #Discography {
-	width: 80%;
+	width: 90%;
 	margin: 0px auto;
 	padding-top: 30px;
 }
@@ -159,7 +176,6 @@ header > .title h2 {
 .Disco-Inner .movtext .button {
 	display: inline-block;
 	margin: 8px 0px;
-	padding: 6px 12px; 
 	color: #808080;
 	text-decoration: none;
 	text-align: center;
@@ -571,10 +587,6 @@ ul.social-icon li {
 }
 
 
-.fa-line {
-	color: #00B900;
-}
-
 .fa-twitter {
 	color: #00acee;
 }
@@ -663,6 +675,11 @@ button:hover{
 /* ----------------- */
 /* 768〜1079px */
 @media screen and (min-width:768px) and (max-width:1079px) {
+	
+	#mainWrapper {
+		width: 95%;
+		margin: 0px auto;
+	}
 
 	#Discography {
 		width: 100%;
@@ -788,6 +805,16 @@ button:hover{
 		justify-content: flex-start;
 		margin-bottom: 40px;
 	}
+	
+	.Profile-wrapper {
+		padding: 20px;
+		background-color: #F7F7F7;
+}
+	
+	.Profile .img {
+		width: 25%;
+		margin: 0px auto;
+}
 
 	.v-info, .d-info {
 		width: 100%;
@@ -804,7 +831,7 @@ button:hover{
 @media screen and (max-width:767px) {
 
 	#mainWrapper {
-		width: 80%;
+		width: 90%;
 	}
 
 	header > .title {
@@ -823,7 +850,7 @@ button:hover{
 		border: 1px solid #808080;
 		border-radius: 10px;
 		font-size: 1.2rem;
-		margin: 0px;
+		margin-bottom: 10px;
 		padding: 15px 30px;
 	}
 
@@ -837,6 +864,16 @@ button:hover{
 	padding-top: 30px;
 }
 
+.Disco-Inner .movtext-pdg2 .circle {
+	font-size: 1.2rem;
+}
+	
+.Disco-Inner .movtext-pdg2 dl {
+	font-size: .9rem;
+	line-height: 1.4rem;
+	margin: 10px 0px;
+}
+	
 .Disco-Inner{
 	width: 90%;
 	display: block;
@@ -847,7 +884,7 @@ button:hover{
 	padding: 40px 20px;
 	background-color: #F7F7F7;
 	border-radius: 10px;
-	font-size: .8rem;
+	font-size: .9rem;
 	line-height: 1.2rem;
 }
 
@@ -859,6 +896,10 @@ button:hover{
 .movtext-pdg, .movtext-pdg2 {
 	padding: 0px 20px 0px 20px;
 }
+	
+.Disco-Inner .movtext-pdg2 p {
+	margin: 0px;
+}
 
 .button-mq {
 	text-align: center;
@@ -867,13 +908,13 @@ button:hover{
 .Disco-Inner .movtext .button {
 	display: inline-block;
 	margin: 8px auto;
-	padding: 12px 70px; 
+	padding: 12px 50px; 
 	color: #808080;
 	text-decoration: none;
 	text-align: center;
 	border: solid 1px #808080;
 	border-radius: 5px;
-	font-size: 0.8rem;
+	font-size: .9rem;
 	-webkit-transition: all 0.1s;
 	transition: all 0.1s;
 }
@@ -916,7 +957,7 @@ button:hover{
 
 	.wrapper {
 		display: block;
-		padding: 30px;
+		padding: 10px;
 	}
 	
 	.mov {
@@ -927,25 +968,25 @@ button:hover{
 	.OverLayer-Inner {
 		position: absolute;
 		overflow-y: scroll;
-		width: 85%;
-		height: 90vh;
+		width: 80%;
+		height: 80vh;
 		transform: translate(-50%, -50%);
 	}
 
 	.OverLayer-Inner .movtext {
-		width: 80%;
-		margin: 30px auto;
+		width: 85%;
+		margin: 20px auto;
 	}
 
 	.OverLayer-Inner .movtext .uline {
 		border-bottom: 1px solid #808080;
-		margin: 15px 0px;
+		margin: 10px 0px;
  }
 
 	.OverLayer-Inner .movtext .button {
 		display: inline-block;
-		margin: 8px auto;
-		padding: 10px 70px; 
+		margin: 4px auto;
+		padding: 10px 50px; 
 		color: #fff;
 		text-decoration: none;
 		text-align: center;
@@ -971,7 +1012,7 @@ button:hover{
 	}
 
 	.Profile .img {
-		width: 60%;
+		width: 70%;
 		margin: 0px auto;
 	}
 
@@ -983,13 +1024,19 @@ button:hover{
 
 	.title h3 {
 		width: 100%;
+		font-size: 1.4rem;
 		text-align: center;
 		margin: 15px auto;
-		
 	}
 	
+	ul.social-icon li {
+	list-style: none;
+	padding: 0px 20px;
+}
+	
+	
 	.P-Info {
-		width: 80%;
+		width: 90%;
 		margin: 0px auto;
 	}
 
@@ -1006,10 +1053,20 @@ button:hover{
 		background-color: #EAEAEA;
 		padding: 4px 17px;
 	}
-
+	
+	
+	.v-info h3, .d-info h3, .r-info h3, #contact h3 {
+		width: 100%;
+		margin: 0px;
+		margin-bottom: 15px;
+		font-size: 1.2rem;
+		padding: 3px 15px;
+		border-left: 3px solid #808080;
+}
+	
 	.v-info dl, .d-info dl {
 		padding-left: 20px;
-		font-size: 0.7rem;
+		font-size: .9rem;
 		display: block;
 	}
 	
@@ -1030,11 +1087,6 @@ button:hover{
 		margin-bottom: 40px;
 	}
 
-	.contents3 h3 {
-		width: 100%;
-		position: relative;
-	}
-
 	.contents3 dl dd {
 		text-align: justify;
 	}
@@ -1043,6 +1095,11 @@ button:hover{
 		width: 100%;
 		margin-bottom: 20px;
 	}
+	
+	.r-info {
+		width: 100%;
+		font-size: 0.8rem;
+}
 
 	.check {
 		background-color: #EAEAEA;
