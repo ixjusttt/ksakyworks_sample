@@ -476,6 +476,15 @@
 /* ▼ 〜768px */
 @media screen and (max-width:768px) {
 
+    #MainMenu .hidden2 {
+      display: none;
+    }
+
+    nav .flex {
+      width: 80%;
+      margin: 0px auto;
+      justify-content: center;
+    }
 
     #Discography {
       width: 100%;
@@ -515,7 +524,6 @@
 
     #About .flex2 {
       display: block;
-      /* justify-content: space-between; */
     }
 
     #About .My_img {
@@ -550,7 +558,7 @@
 
     #About .subtitle {
       display: inline-block;
-      width: 35%;
+      width: 37%;
     }
 
     #About input[type="text"], #About input[type="email"] {

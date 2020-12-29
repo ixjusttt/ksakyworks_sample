@@ -6,8 +6,6 @@
 body {
   position: relative;
   color: #333;
-  font-size: .85rem;
-  /* font-weight:lighter; */
   font-family: 'Josefin Sans', sans-serif;
   font-family: 'Noto Sans JP', sans-serif;
 }
@@ -22,7 +20,7 @@ a:hover {
   text-decoration: none;
 }
 
-p{
+p {
   line-height: 1.15rem; 
 }
 
@@ -249,8 +247,8 @@ p{
       text-align: center;
     }
 
-
-
-
+    body {
+      font-size: .75rem;
+    }
 
 }
