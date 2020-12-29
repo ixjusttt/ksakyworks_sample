@@ -568,4 +568,26 @@
     #About textarea {
       width: 90%;
     }
+
+    .overlayer {
+      width: 100%;
+      height: 100vh;
+    }
+
+    .ol-wrapper {
+      padding: 0px;
+      width: 75%;
+      height: 85vh;
+    }
+
+    .overlayer .text {
+      margin: 0px;
+      width: 100%;
+      color: #FFF;
+    }
+
+    .overlayer .subtitle {
+      display: inline-block;
+      width: 40%;
+    }
 }

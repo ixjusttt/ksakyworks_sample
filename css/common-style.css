@@ -8,6 +8,7 @@ body {
   color: #333;
   font-family: 'Josefin Sans', sans-serif;
   font-family: 'Noto Sans JP', sans-serif;
+  font-size: .75rem;
 }
 
 a {
@@ -245,10 +246,6 @@ p {
 
     #About h2 {
       text-align: center;
-    }
-
-    body {
-      font-size: .75rem;
     }
 
 }
