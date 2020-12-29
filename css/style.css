@@ -1,1165 +1,563 @@
 @charset "utf-8";
 
-/* 共通 */
-body {
-	font-family: 'Roboto', sans-serif;
-	font-family: 'Noto Sans JP', sans-serif;
-	color: #808080;
-	letter-spacing: .1rem;
-	line-height: 1.1rem;
-}
-
-a {
-	color: #666;
-	text-decoration: none;
-}
-
-a:hover {
-	color: #BBBBBB;
-}
-
 /* ヘッダー */
-#mainWrapper {
-	width: 90%;
-	margin: 0px auto;
+/* ----------------------- */
+#Main {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
 }
 
-header > .title {
-	text-align: center;
-	padding: 100px 0px;
+/* ナビ */
+/* ----------------------- */
+#MainMenu {
+  display: block;
+  width: 70%;
 }
 
-header > .title h2 {
-	margin: 0px;
-	font-size: 2rem;
+#MainMenu .flex {
+  display: flex;
+  justify-content: space-between;
 }
 
-/* メニュー */
-
-#page_top {
-	position: fixed;
-	bottom: 18px;
-	right: 18px;
-	display: inline-block;
-	padding: 18px;
-	background-color: #333;
-	opacity: .7;
-	border-radius: 50%;
+#MainMenu .arrow-d {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 3px solid;
+  border-color:#333 #333 transparent transparent;
+  transform: rotate(135deg) translateX(-3px) translateY(0px);
+  vertical-align: top;
 }
 
-.fa-chevron-up {
-	color: #fff;
+#MainMenu a {
+  display: inline-block;
+  position: relative;
+  color: #333;
+  text-decoration: none;
 }
 
-
-.menu {
-	display: flex;
-	justify-content: center;
-	width: 100%;
-	text-align: center;
-	margin: 10px auto;
-}
-
-.menu h2 {
-	font-size: 0.8rem;
-	margin: 0px;
-	padding: 10px 30px;
-}
-
-.arrow_u {
-	position: relative;
-	display: inline-block;
-	padding-left: 20px;
-	color: #808080;
-	text-decoration: none;
-}
-
-.arrow_u:before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  border: 0;
-  border-bottom: solid 2px #808080;
-  border-right: solid 2px #808080;
-  position: absolute;
-  top: 60%;
-  left: 0;
-  margin-top: -6px;
-  transform: rotate(45deg);
-}
- 
-.arrow_t {
-	position: relative;
-	display: inline-block;
-	padding-left: 20px;
-	color: #808080;
-	text-decoration: none;
-}
-
-.arrow_t:before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  border: 0;
-  border-bottom: solid 2px #808080;
-  border-right: solid 2px #808080;
-  position: absolute;
-  top: 70%;
-  left: 0;
-  margin-top: -6px;
-  transform: rotate(225deg);
-}
-
-
-/* ディスコグラフィ */
-#Discography {
-	width: 90%;
-	margin: 0px auto;
-	padding-top: 30px;
-}
-
-.Disco-wrapper {
-	padding: 40px;
-	background-color: #F7F7F7;
-	border-radius: 10px;
-	font-size: .8rem;
-	line-height: 1.2rem;
-}
-
-.Disco-Inner{
-	width: 95%;
-	display: flex;
-	justify-content: space-between;
-	margin: 20px auto 0px;
-}
-
-.Disco-Inner .mov {
-	width: 60%;
-	margin: 0px;
-}
-
-.Disco-Inner .movtext {
-	width: 40%;
-	margin: 0px;
-}
-
-.Disco-Inner .movtext .uline {
-	border-bottom: 1px solid #808080;
-	margin: 8px;
-}
-
-.Disco-Inner .movtext-pdg p {
-	margin: 0px;
-}
-
-.Disco-Inner .movtext-pdg2 p {
-	margin: 3px 0px;
-}
-
-.Disco-Inner .movtext-pdg2 .artist {
-	font-size: .8rem;
-	font-weight: bold;
-}
-
-.Disco-Inner .movtext-pdg2 .circle {
-	font-size: 1rem;
-	line-height: 1.3rem;
-	font-weight: bold;
-}
-
-.Disco-Inner .movtext-pdg2 dl {
-	font-size: .8rem;
-	line-height: 1rem;
-	margin: 10px 0px;
-}
-
-.Disco-Inner .movtext .button {
-	display: inline-block;
-	margin: 8px 0px;
-	color: #808080;
-	text-decoration: none;
-	text-align: center;
-	border: solid 1px #808080;
-	border-radius: 5px;
-	font-size: 0.7rem;
-	-webkit-transition: all 0.1s;
-	transition: all 0.1s;
-}
-
-.Disco-Inner .movtext .button:hover{
-	background-color: #808080;
-	color: #fff;
-}
-
-.Disco-wrapper .title-Inner-Track {
-	width: 90%;
-	margin: 0px auto;
-	padding-top: 5px;
-	font-weight: bold;
-}
-
-.Disco-wrapper .wrapper {
-	width: 90%;
-	display: flex;
-	justify-content: space-between;
-	padding: 15px 20px;
-	margin: 0px auto;
-	background-color: #fff;
-	/* border: 1px solid #EAEAEA; */
-	border-radius: 10px;
-}
-
-.Disco-wrapper .title-Inner-L, .title-Inner-R {
-	width: 50%;
-}
-
-.Disco-wrapper .title-Inner p {
-	margin: 2px 0px;
-}
-
-.title-note {
-	font-size: .5rem;
-	font-weight: lighter;
-	line-height: .8rem;
-	letter-spacing: 0px;
-	margin: 0px;
-	padding-left: 15px;
-	padding-bottom: 5px;
-}
-
-
-
-
-
-/* 作品一覧 */
-
-.contents {
-	width: 100%;
-	margin-bottom: 30px;
-}
-
-ul.W-Info {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	padding: 0px;
-	padding-top: 40px;
-}
-
-ul.W-Info li {
-	position: relative;
-	width: 18%;
-	list-style: none;
-	margin-right: 5px;
-	margin-bottom: 5px;
-}
-
-ul.W-Info li:before{
+#MainMenu a:before{
 	content: "";
-	display: block;
-	padding-top: 100%;
-}
-
-ul.W-Info li img {
 	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	right: 0;
-	bottom: 0;
 	left: 0;
-	margin: auto;
-	object-fit: cover;
-	object-position:50% 50%;
-	border: 1px solid #E5E5E5;
-}
-
-
-/* 作品詳細 オーバーレイ */
-.OverLayer {
-	position: fixed;
-	top: 0;
-	left: 0;
+	bottom: -8px;
 	width: 100%;
-	height: 100vh;
-	transition: opacity 0.65s;
-	pointer-events: none;
-	opacity: 0;
-	z-index: 999999999;
-	font-size: 0.8rem;
-	color: #fff;
+	height: 2px;
+	background: #999;
+	transform: scale(0, 1);
+	transition: 0.2s;
 }
 
-.OverLayer.isShow {
-  transition: opacity 0.65s;
-  pointer-events: auto;
-  opacity: 1;
+#MainMenu a:hover:before {
+	transform: scale(1);
 }
 
-.OverLayer-Mask {
-  position: fixed;
-  background: rgba(0, 0, 0, .88);
+/* Discography */
+/* ----------------------- */
+#Discography {
+  width: 86%;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+#Discography .music{
+  width: 60%;
+}
+
+#Discography .text{
+  width: 40%;
+}
+
+#Discography .subtitle {
+  display: inline-block;
+  width: 35%;
+}
+
+#Discography .ws-bt {
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #808080;
+  border-radius: 5px;
+}
+
+#Discography .ws-bt:hover {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #EAEAEA;
+  background-color: #808080;
+  color: #FFF;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+#Discography .flex2 {
+  display: flex;
+  justify-content: center;
+}
+
+#Discography .music_list_L, #Discography .music_list_R {
+  width: 45%;
+}
+
+/* Works */
+/* ----------------------- */
+#Works ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#Works li {
+  position: relative;
+  width: 14%;
+}
+
+#Works li::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+#Works li img {
+  position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  object-fit: cover;
+  border: 1px solid #EAEAEA;
 }
 
-.OverLayer-Inner {
-	position: absolute;
-	overflow-y: scroll;
-  top: 50%;
-  left: 50%;
-	width: 85%;
-	height: 55%;
-  transform: translate(-50%, -50%);
+#Works .mark_new {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 10;
 }
 
-.wrapper {
-	display: flex;
-	padding: 30px;
+.mark_new::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  left: 0;
+  top: 0;
+  border-style: solid;
+  border-width: 60px 60px 0px 0px;
+  border-color: #dd0d0d transparent blue green;
 }
 
-.mov {
-	width: 65%;
-	margin: 0px;
+.mark_new::after {
+  position: absolute;
+  content: "NEW";
+  transform: rotate(315deg);
+  display: block;
+  color: #fff;
+  top: 12px;
+  left: 4px;
+  text-align: center;
 }
 
-.youtube{
-	position: relative;
-	width: 100%;
-	padding-top: 56.25%;
+#Works .ribbon {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 60%;
+  z-index: 5;
+  text-align: center;
+  color: #fff;
+  border: 1px solid #333;
+  background: #333;
+  opacity: .85;
 }
 
-.youtube iframe{
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 100% !important;
-	height: 100% !important;
+/* About */
+/* ----------------------- */
+#About {
+  background-color: #EAEAEA;
 }
 
-.wrapper .small, .social-icon .small {
-	font-size: 0.5rem;
-	text-align: right;
-	margin: 0px;
-	margin-top: 5px;
-	margin-right: 5px;
+#About h3 {
+  display: inline-block;
 }
 
-.OverLayer-Inner .movtext {
-	width: 35%;
-	margin: 25px 0px;
+#About p {
+  text-align: justify;
 }
 
-.movtext-pdg2 .artist {
-	font-size: 1rem;
-	font-weight: bold;
+#About .title {
+  border-left: 3px solid #333;
 }
 
-.movtext-pdg p {
-	margin: 0px;
-	margin-top: 5px;
+#About .subtitle {
+  display: inline-block;
+  width: 20%;
 }
 
-.movtext-pdg2 p {
-	margin: 0px;
-	margin-bottom: 15px;
+#About .flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.movtext-pdg, .movtext-pdg2 {
-	padding-left: 25px;
+#About .flex2 {
+  display: flex;
+  justify-content: space-between;
 }
 
-.movtext-pdg2 .title {
-	font-size: 1.5rem;
-	line-height: 1.7rem;;
-	font-weight: bold;
+#About .flex3 {
+  display: flex;
 }
 
-.movtext .uline {
- 	border-bottom: 1px solid #808080;
-	margin: 15px 0 25px 0;
+#About .My_img {
+  width: 20%;
 }
 
-.movtext .button {
-	padding: 8px 15px; 
-	color: #fff;
-	text-decoration: none;
-	text-align: center;
-	border: solid 1px #fff;
-	border-radius: 5px;
-	font-size: 0.7rem;
-	-webkit-transition: all 0.1s;
-	transition: all 0.1s;
+#About .My_img img{
+  width: 100%;
+  border-radius: 50%;
 }
 
-.movtext .button:hover{
-	background-color: #fff;
-	color: #000;
+#About .My_text {
+  width: 70%;
 }
 
-.movtext dl {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	margin: 25px 0px;
-	font-size: .7rem;
-	line-height: 1.3rem;
+#About .prof {
+  width: 80%;
 }
 
-.movtext dt {
-	width: 40%;
-	overflow-wrap: break-word;
+#About .sns {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /*下揃え*/
+  width: 20%;
 }
-
-.movtext dd {
-	width: 60%;
-	margin: 0px;
-	overflow-wrap: break-word;
-}
-
-
-/* プロフィール */
-.Profile {
-	width: 100%;
-	justify-content: center;
-	padding: 50px 0px 60px 0px;
-	font-style: normal;
-	margin: 0px;
-}
-
-.Profile-wrapper {
-	padding: 40px;
-	background-color: #F7F7F7;
-}
-
-.All-Info{
-	display: flex;
-}
-
-.Profile .img {
-	width: 20%;
-	margin: 0px auto;
-}
-
-.Profile .img img {
-	width: 100%;
-	border-radius: 50%;
-}
-
-.Profile p {
-	text-align: justify;
-}
-
-.Profile .contents .title {
-	display: flex;
-	text-align: left;
-	padding: 0px;
-	position: relative;
-	margin-top: 0px;
-}
-
-.P-Info {
-	width: 70%;
-	margin: 0px;
-	margin-left: 10px;
-}
-
-.Profile .contents .title:after {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width:90%;
-	height: 5px;
-	content: '';
-	background-image: -webkit-repeating-linear-gradient(135deg, #BBB, #BBB 1px, transparent 2px, transparent 5px);
-	background-image: repeating-linear-gradient(-45deg, #BBB, #BBB 1px, transparent 2px, transparent 5px);
-	background-size: 7px 7px;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-
-.title h3 {
-	width: 90%;
-	position: relative;
-}
-
-.contents3 {
-margin-bottom: 40px;
-}
-
-.contents3 h3 {
-	width: 50%;
-	position: relative;
-}
-
-.contents p {
-	font-size: 0.7rem;
-	line-height: 1.6;
-	color: #808080;
-	margin: 10px 0px 0px 0px;
-}
-
-.contents p + p {
-	margin: 0px;
-}
-
-.contents2 {
-	display: flex;
-	justify-content: flex-start;
-	margin-bottom: 20px;
-}
-
-.v-info, .d-info {
-	width: 50%;
-	font-size: 0.8rem;
-}
-
-.r-info {
-	width: 90%;
-	font-size: 0.8rem;
-}
-
-.v-info h3, .d-info h3, .r-info h3, #contact h3 {
-	margin: 0px;
-	margin-bottom: 15px;
-	font-size: 1rem;
-	padding: 3px 15px;
-	border-left: 3px solid #808080;
-}
-
-.v-info dl, .d-info dl {
-	padding-left: 20px;
-	font-size: 0.7rem;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.v-info dt, .d-info dt, .r-info dt {
-	width: 30%;
-	margin: 0px 0px 5px 0px;
-}
-
-.v-info dd, .d-info dd {
-	width: 70%;
-	margin: 0px;
-}
-
-.r-info dd {
-	width: 100%;
-	margin: 0px;
-}
-
-.r-info dd + dt {
-	margin-top: 20px;
-}
-
-.border {
-	background-color: #EAEAEA;
-	padding: 2px 17px;
-}
-
-.check {
-	background-color: #EAEAEA;
-	padding: 2px 5px;
-	margin: 0px 5px;
-}
-
-
-/* ソーシャルアイコン */
-.P-Info ul.social-icon {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	padding: 0px auto;
-}
-
-.share ul.social-icon {
-	width: 97%;
-	text-align: right;
-	margin: 50px 0 10px 0;
-	padding: 0px;
-}
-
-ul.social-icon li {
-	list-style: none;
-	padding: 0px 10px;
-}
-
 
 .fa-twitter {
-	color: #00acee;
+  color: #00acee;
 }
 
 .fa-soundcloud {
-	color: #ff7700;
+  color:#ff7700;
 }
 
-.fa-youtube {
-	color: #c4302b;
+.fa-youtube{
+  color: #FF0000;
 }
 
-
-/* お問い合わせ */
-#contact {
-	font-size: 0.7rem;
-	color: #808080;
+#About .Partition {
+  border-bottom: 1px solid #808080;
 }
 
-#contact p {
-	margin: 0px;
-	padding-top: 10px;
-	padding-bottom: 15px;
+#About .Partition2 {
+  width: 20%;
+  border-bottom: 1px dotted #808080;
 }
 
-input[type="text"], input[type="email"] {
-	margin: 0;
-	padding: 0;
-	background: none;
-	border: none;
-	border-radius: 0;
-	outline: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
+#About label {
+  letter-spacing: .05rem;
 }
 
-#form-name, #form-mail {
-	width: 50%;
- 	border-bottom: 1px solid #808080;
+#About input[type="text"], #About input[type="email"] {
+  width: 40%;
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 1px solid #333;
 }
 
-textarea {
-	width: 70%;
-	height: 150px;
-	margin: 0;
-	padding: 0.5rem;
-	font-size: 1rem;
-	border: solid 1px #808080;
-	border-radius: 4px;
+#About textarea {
+  width: 70%;
+  height: 10rem;
 }
 
-button {
-    width: 50px;
-    height: 30px;
-	color: #fff;
-	text-decoration: none;
-	text-align: center;
-	background-color: #808080;
-	border: solid 1px #fff;
-	border-radius: 10%;
-	font-size: 0.7rem;
-	-webkit-transition: all 0.1s;
-	transition: all 0.1s;
+#About button {
+  border: 1px solid #808080;
+  border-radius: 5px;
 }
 
-button:hover{
-     background-color: #EAEAEA;
-}
-
-#copyright {
-	text-align: right;
-	margin-bottom: 5px;
-	padding-right: 25px;
-	font-size: 8px;
-	font-weight: 100;
+#About button:hover {
+  background-color: #808080;
+  color: #FFF;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.1s;
 }
 
 
+/* コピーライト */
+/* ----------------------- */
+#cpr {
+  text-align: right;
+}
+
+#page_top {
+  position: fixed;
+  display: inline-block;
+  background-color: #333;
+  opacity: .8;
+  border-radius: 5px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10000;
+}
+
+#page_top:hover {
+  display: inline-block;
+  background-color: #999;
+  color: #FFF;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+#page_top .arrow-d {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 8px solid;
+  border-color:#fff #fff transparent transparent;
+  transform: rotate(-45deg) translateX(-4px) translateY(13px);
+  vertical-align: top;
+}
 
 
 
+/* オーバーレイ */
+/* ----------------------- */
+.overlayer {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 999999999;
+}
 
-/* ----------------- */
+.isShow {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s;
+}
+
+.ol-mask {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, .85);
+}
+
+.ol-wrapper {
+  position: fixed;
+  width: 600px;
+  height: 80vh;
+  overflow-y: scroll;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.overlayer .music {
+  width: 100%;
+  text-align: center;
+}
+
+.overlayer .ifs_time {
+  display:inline-block;
+  width: 80%;
+  text-align: right;
+  color: #fff;
+}
+
+.overlayer .text {
+  width: 80%;
+  color: #FFF;
+}
+
+.overlayer .subtitle {
+  display: inline-block;
+  width: 30%;
+}
+
+.ws-wrapper {
+  text-align: center;
+}
+
+.overlayer .ws-bt {
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #808080;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.overlayer .ws-bt:hover {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #EAEAEA;
+  background-color: #fff;
+  color: #333;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+
+/* ----------------------- */
 /* レスポンシブ対応 */
-/* ----------------- */
-/* 768〜1079px */
-@media screen and (min-width:768px) and (max-width:1079px) {
-	
-	#mainWrapper {
-		width: 95%;
-		margin: 0px auto;
-	}
+/* ----------------------- */
+/* ▼ 768px〜1024px */
+@media screen and (min-width:768px) and (max-width:1024px) {
 
-	#Discography {
-		width: 100%;
-		margin: 0px auto;
-		padding-top: 30px;
-	}
-	
-	.Disco-Inner {
-		width: 90%;
-		display: block;
-		margin: 0px auto;
-	}
+    #Discography .subtitle {
+      display: inline-block;
+      width: 45%;
+    }
 
-	.title-Inner {
-		width: 90%;
-		margin: 0px auto;
-	}
-	
-	.Disco-wrapper {
-		padding: 40px 20px;
-		margin: 0px auto;
-		background-color: #F7F7F7;
-		border-radius: 10px;
-		font-size: .8rem;
-		line-height: 1.2rem;
-	}
-	
-	.Disco-Inner .mov, .Disco-Inner .movtext {
-		width: 100%;
-		margin: 0px;
-	}
+    #Discography .ws-bt {
+      width: 50%;
+      display: inline-block;
+      text-align: center;
+      border: 1px solid #808080;
+      border-radius: 5px;
+    }
 
-	.Disco-wrapper .wrapper {
-		width: 90%;
-		display: flex;
-		justify-content: space-between;
-		padding: 15px 35px;
-		margin: 0px auto;
-		background-color: #fff;
-		border-radius: 10px;
-	}
-	
-	ul.W-Info li {
-		position: relative;
-		width: 30%;
-		list-style: none;
-		margin-right: 5px;
-		margin-bottom: 5px;
-	}
+    #Works li {
+      position: relative;
+      width: 25%;
+    } 
 
-	
-	.menu h2 {
-		font-size: 1.2rem;
-		margin: 0px;
-	}
+    #About .flex2 {
+      display: block;
+      text-align: center;
+    }
 
-	.wrapper {
-		display: block;
-		padding: 30px;
-	}
-	
-	.mov {
-		width: 100%;
-		margin: 0px;
-	}
-	
+    #About .My_img {
+      width: 35%;
+      margin-bottom: 10px;
+    }
 
-	.OverLayer-Inner {
-		position: absolute;
-		overflow-y: scroll;
-		width: 85%;
-		height: 90vh;
-		transform: translate(-50%, -50%);
-	}
+    #About .My_text {
+      width: 80%;
+      margin: 0px auto;
+    }
 
-	.OverLayer-Inner .movtext {
-		width: 80%;
-		margin: 30px auto;
-	}
+    #About .prof {
+      width: 100%;
+    }
 
-	.OverLayer-Inner .movtext .uline {
-		border-bottom: 1px solid #808080;
-		margin: 15px 0px;
- }
+    #About .prof > p{
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-	.OverLayer-Inner .movtext .button {
-		display: inline-block;
-		margin: 8px auto;
-		padding: 10px 70px; 
-		color: #fff;
-		text-decoration: none;
-		text-align: center;
-		border: solid 1px #808080;
-		border-radius: 5px;
-		font-size: 0.8rem;
-		-webkit-transition: all 0.1s;
-		transition: all 0.1s;
-	}
+    #About .sns {
+      display: flex;
+      width: 60%;
+      margin: 0px auto;
+    }
 
-	.OverLayer-Inner .movtext .button:hover{
-		background-color: #fff;
-		color:#808080;
-	}
-
-
-
-	.movtext .button {
-		display: inline-block;
-		padding: 10px 18px; 
-		margin-top: 20px;
-		color: #fff;
-		text-decoration: none;
-		text-align: center;
-		border: solid 1px #fff;
-		border-radius: 5px;
-		font-size: 1rem;
-		-webkit-transition: all 0.1s;
-		transition: all 0.1s;
-	}
-
-	.contents2 {
-		display: block;
-		justify-content: flex-start;
-		margin-bottom: 40px;
-	}
-	
-	.Profile-wrapper {
-		padding: 20px;
-		background-color: #F7F7F7;
-}
-	
-	.Profile .img {
-		width: 25%;
-		margin: 0px auto;
-}
-
-	.v-info, .d-info {
-		width: 100%;
-		margin-bottom: 20px;
-	}
+    #About .sns_items {
+      display: block;
+      margin: 0px auto;
+    }
 
 }
 
+/* ▼ 〜768px */
+@media screen and (max-width:768px) {
 
 
+    #Discography {
+      width: 100%;
+      padding: 0px;
+      background-color: #f5f5f5;
+      border-radius: 10px;
+    }
 
+    #Discography .music{
+      width: 90%;
+    }
 
-/* 767px以下*/
-@media screen and (max-width:767px) {
+    #Discography .text{
+      width: 80%;
+      padding: 0px;
+      margin: 0px auto;
+    }
 
-	#mainWrapper {
-		width: 90%;
-	}
+    #Discography .subtitle {
+      display: inline-block;
+      width: 40%;
+    }
 
-	header > .title {
-		text-align: center;
-		padding: 70px 0px 50px 0px;
-	}
+    #Discography .flex2 {
+      display: block;
+    }
 
-	.menu {
-		display: block;
-		justify-content: center;
-		width: 100%;
-		text-align: center;
-	}
+    #Discography .music_list_L, #Discography .music_list_R {
+      width: 90%;
+      margin: 0px auto;
+    }
 
-	.menu h2 {
-		border: 1px solid #808080;
-		border-radius: 10px;
-		font-size: 1.2rem;
-		margin-bottom: 10px;
-		padding: 15px 30px;
-	}
+    #Works li {
+      position: relative;
+      width: 50%;
+    } 
 
-.menu > .hidden {
-		display: none;
+    #About .flex2 {
+      display: block;
+      /* justify-content: space-between; */
+    }
+
+    #About .My_img {
+      width: 50%;
+      margin-bottom: 10px;
+    }
+
+    #About .My_text {
+      width: 80%;
+      margin: 0px auto;
+    }
+
+    #About .prof {
+      width: 100%;
+    }
+
+    #About .prof > p{
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    #About .sns {
+      display: flex;
+      width: 60%;
+      margin: 0px auto;
+    }
+
+    #About .sns_items {
+      display: block;
+      margin: 0px auto;
+    }
+
+    #About .subtitle {
+      display: inline-block;
+      width: 35%;
+    }
+
+    #About input[type="text"], #About input[type="email"] {
+      width: 80%;
+    }
+    
+    #About textarea {
+      width: 90%;
+    }
 }
-
-#Discography {
-	width: 100%;
-	margin: 0px auto;
-	padding-top: 30px;
-}
-
-.Disco-Inner .movtext-pdg2 .circle {
-	font-size: 1.2rem;
-}
-	
-.Disco-Inner .movtext-pdg2 dl {
-	font-size: .9rem;
-	line-height: 1.4rem;
-	margin: 10px 0px;
-}
-	
-.Disco-Inner{
-	width: 90%;
-	display: block;
-	margin: 0px auto;
-}
-
-.Disco-wrapper {
-	padding: 40px 20px;
-	background-color: #F7F7F7;
-	border-radius: 10px;
-	font-size: .9rem;
-	line-height: 1.2rem;
-}
-
-.Disco-Inner .mov, .Disco-Inner .movtext {
-	width: 100%;
-	margin: 0px;
-}
-
-.movtext-pdg, .movtext-pdg2 {
-	padding: 0px 20px 0px 20px;
-}
-	
-.Disco-Inner .movtext-pdg2 p {
-	margin: 0px;
-}
-
-.button-mq {
-	text-align: center;
-}
-
-.Disco-Inner .movtext .button {
-	display: inline-block;
-	margin: 8px auto;
-	padding: 12px 50px; 
-	color: #808080;
-	text-decoration: none;
-	text-align: center;
-	border: solid 1px #808080;
-	border-radius: 5px;
-	font-size: .9rem;
-	-webkit-transition: all 0.1s;
-	transition: all 0.1s;
-}
-
-.Disco-wrapper .wrapper {
-	width: 90%;
-	display: block;
-	justify-content: space-between;
-	padding: 20px 0px 20px 30px;
-	margin: 0px auto;
-	background-color: #fff;
-	border: 1px solid #EAEAEA;
-	border-radius: 10px;
-}
-
-.Disco-wrapper .title-Inner-L, .title-Inner-R {
-	width: 100%;
-}
-
-.Disco-wrapper .title-Inner-Track {
-	width: 100%;
-	margin: 10px auto;
-	text-align: center;
-	font-size: 1rem;
-	padding-top: 5px;
-	font-weight: bold;
-}
-
-	ul.W-Info li {
-		position: relative;
-		width: 100%;
-		list-style: none;
-		margin-right: 5px;
-		margin-bottom: 5px;
-	}
-
-	.W-Info > .hidden {
-		display: none;
-}
-
-	.wrapper {
-		display: block;
-		padding: 10px;
-	}
-	
-	.mov {
-		width: 100%;
-		margin: 0px;
-	}
-	
-	.OverLayer-Inner {
-		position: absolute;
-		overflow-y: scroll;
-		width: 80%;
-		height: 80vh;
-		transform: translate(-50%, -50%);
-	}
-
-	.OverLayer-Inner .movtext {
-		width: 85%;
-		margin: 20px auto;
-	}
-
-	.OverLayer-Inner .movtext .uline {
-		border-bottom: 1px solid #808080;
-		margin: 10px 0px;
- }
-
-	.OverLayer-Inner .movtext .button {
-		display: inline-block;
-		margin: 4px auto;
-		padding: 10px 50px; 
-		color: #fff;
-		text-decoration: none;
-		text-align: center;
-		border: solid 1px #808080;
-		border-radius: 5px;
-		font-size: 0.8rem;
-		-webkit-transition: all 0.1s;
-		transition: all 0.1s;
-	}
-
-	.OverLayer-Inner .movtext .button:hover{
-		background-color: #fff;
-		color:#808080;
-	}
-
-	.Profile-wrapper {
-		padding: 40px 20px;
-		background-color: #F7F7F7;
-	}
-
-	.All-Info{
-		display: block;
-	}
-
-	.Profile .img {
-		width: 70%;
-		margin: 0px auto;
-	}
-
-	.Profile .contents .title {
-		display: block;
-		padding: 0px;
-		margin: 0px;
-	}
-
-	.title h3 {
-		width: 100%;
-		font-size: 1.4rem;
-		text-align: center;
-		margin: 15px auto;
-	}
-	
-	ul.social-icon li {
-	list-style: none;
-	padding: 0px 20px;
-}
-	
-	
-	.P-Info {
-		width: 90%;
-		margin: 0px auto;
-	}
-
-	.P-Info ul.social-icon {
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		margin: 0px;
-		padding: 15px 0px 25px 0px;
-	}
-
-	.border {
-		display: block;
-		background-color: #EAEAEA;
-		padding: 4px 17px;
-	}
-	
-	
-	.v-info h3, .d-info h3, .r-info h3, #contact h3 {
-		width: 100%;
-		margin: 0px;
-		margin-bottom: 15px;
-		font-size: 1.2rem;
-		padding: 3px 15px;
-		border-left: 3px solid #808080;
-}
-	
-	.v-info dl, .d-info dl {
-		padding-left: 20px;
-		font-size: .9rem;
-		display: block;
-	}
-	
-	.v-info dt, .d-info dt, .r-info dt {
-		width: 100%;
-		margin: 0px 0px 5px 0px;
-	}
-	
-	.v-info dd, .d-info dd {
-		width: 100%;
-		margin: 0px 0px 5px 0px;
-		padding-left: 15px;
-	}
-
-	.contents2 {
-		display: block;
-		justify-content: flex-start;
-		margin-bottom: 40px;
-	}
-
-	.contents3 dl dd {
-		text-align: justify;
-	}
-
-	.v-info, .d-info {
-		width: 100%;
-		margin-bottom: 20px;
-	}
-	
-	.r-info {
-		width: 100%;
-		font-size: 0.8rem;
-}
-
-	.check {
-		background-color: #EAEAEA;
-		padding: 1px 3px;
-		margin: 0px 5px;
-	}
-
-	#form-name, #form-mail {
-		width: 90%;
-		 border-bottom: 1px solid #808080;
-	}
-	
-	textarea {
-		width: 90%;
-		height: 250px;
-		margin: 0;
-		padding: 0.5rem;
-		font-size: 1rem;
-		border: solid 1px #808080;
-		border-radius: 4px;
-	}
-
-	button {
-	width: 80px;
-	height: 40px;
-	color: #fff;
-	text-decoration: none;
-	text-align: center;
-	background-color: #808080;
-	border: solid 1px #fff;
-	border-radius: 5px;
-	font-size: .9rem;
-	-webkit-transition: all 0.1s;
-	transition: all 0.1s;
-}
-
-.share ul.social-icon {
-	width: 97%;
-	text-align: right;
-	margin: 50px 0 10px 0;
-	padding: 0px;
-}
-
-#copyright {
-	text-align: right;
-	margin-bottom: 5px;
-	padding-right: 25px;
-	font-size: 0.8rem;
-	font-weight: 100;
-}
-
-}
-
-
-
-
-
-
-
-
-
-
-

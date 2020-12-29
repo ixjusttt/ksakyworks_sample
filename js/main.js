@@ -1,209 +1,227 @@
-
 $(function(){
 
-	const infos =[
+      $('.JS_click_Trigger').on('click',function(){
 
-		// data index 0
-		{preview:'	<iframe width="560" height="315" src="https://www.youtube.com/embed/Y5ws8WmAX7A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',date:'2020.11.03',eventname:'BOFXVI',circle:'TEAM : BREWERS',subtitle:'',title:'afternoon',artist:'ag feat.倉先',item01:'Music',item01_1:'：ag',item02:'BGA',item02_1:'：fisH',item03:'Vocal',item03_1:'：倉先 /kurasaki',item04:'',item04_1:'',item05:'',item05_1:'',small:'',url:'http://manbow.nothing.sh/event/event.cgi?action=More_def&num=420&event=133'},
+        // 情報
+        const infos =[
 
-		// data index 1
-		{preview:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/912175930&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',date:'2020.10.25',eventname:'秋M3',circle:'STRLabel 新譜「BREWERS」',subtitle:'Track1',title:'afternoon',artist:'ag feat.倉先',item01:'Music',item01_1:'：ag',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'※0:00〜0:59',url:'http://str3.org/brewers/'},
+          // data-index=[0]
+          { ifs_prv:'<iframe width="560" height="315" src="https://www.youtube.com/embed/Y5ws8WmAX7A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', ifs_time:'', ifs_date:'2020.11.03', ifs_event:'BOFXVI', ifs_album:'TEAM:BREWERS', ifs_track:'', ifs_title:'afternoon', ifs_artist:'ag feat.倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'ag', ifs_sb02:'BGA',ifs_colon02:'：', ifs_sb02_d:'fisH', ifs_sb03:'Vocal', ifs_colon03:'：', ifs_sb03_d:'倉先/kurasaki', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'http://manbow.nothing.sh/event/event.cgi?action=More_def&num=420&event=133'},
 
-		// data index 2
-		{preview:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/910304233&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',date:'2020.10.25',eventname:'秋M3',circle:'Loquartz 新譜「STYLEY NiGHT」',subtitle:'Track3',title:'アクアリウム feat.倉先',artist:'Kenichi Chiba',item01:'Music',item01_1:'：Kenichi Chiba',item02:'LYRICS',item02_1:'：水崎うき',item03:'Vocal',item03_1:'：倉先 /kurasaki',item04:'',item04_1:'',item05:'',item05_1:'',small:'',url:'https://night.loquartz.com/'},
+          // data-index=[1]
+          { ifs_prv:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/912175930&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>', ifs_time:'※0:00〜0:59', ifs_date:'2020.10.25', ifs_event:'秋M3', ifs_album:'STRLabel 新譜「BREWERS」', ifs_track:'Track1', ifs_title:'afternoon', ifs_artist:'ag feat.倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'ag', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:'', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'http://str3.org/brewers/'},
 
-		// data index 3
-		{preview:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/876233788&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',date:'2020.08.15',eventname:'',circle:'Diverse System 新譜「AD:HOUSE8」',subtitle:'Disc1-Track9',title:'Slowly',artist:'ag feat.倉先',item01:'Music',item01_1:'：ag',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'',url:'http://adh8.diverse.jp/'},
+          // data-index=[2]
+          { ifs_prv:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/910304233&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>', ifs_time:'※2:05〜3:05', ifs_date:'2020.10.25', ifs_event:'秋M3', ifs_album:'Loquartz 新譜「STYLEY NiGHT」', ifs_track:'Track3', ifs_title:'アクアリウム feat.倉先', ifs_artist:'Kenichi Chiba', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'Kenichi Chiba', ifs_sb02:'Lyrics',ifs_colon02:'：', ifs_sb02_d:'水崎うき', ifs_sb03:'Vocal', ifs_colon03:'：', ifs_sb03_d:'倉先/kurasaki', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'https://night.loquartz.com/'},
 
-		// data index 4
-		{preview:'<iframe width="560" height="315" src="https://www.youtube.com/embed/c7-H3YKpOVY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',date:'2020.07',eventname:'cover',circle:'',subtitle:'',title:'ディスコの神様 feat.藤井隆(ag Remix)',artist:'cover by倉先',item01:'Music/LYRICS',item01_1:'：tofubeats',item02:'Original Vocal',item02_1:'：藤井隆',item03:'Mix',item03_1:'：ag',item04:'Vocal',item04_1:'：倉先 /kurasaki',item05:'',item05_1:'',small:'',url:'https://www.youtube.com/channel/UCAMAwKWoMOBa0h97nQc_mcQ'},
+          // data-index=[3]
+          { ifs_prv:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/876233788&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>', ifs_time:'※2:05〜3:05', ifs_date:'2020.08.15', ifs_event:'秋M3', ifs_album:'Diverse System 新譜「AD:HOUSE8」', ifs_track:'Disc1-Track9', ifs_title:'Slowly', ifs_artist:'ag feat.倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'ag', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:'', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'http://adh8.diverse.jp/'},
 
-		// data index 5
-		{preview:'<iframe width="560" height="315" src="https://www.youtube.com/embed/btL2Vk75fss" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',date:'2020.06',eventname:'Free DL',circle:'',subtitle:'',title:'Plain',artist:'ag feat.倉先',item01:'Music',item01_1:'：ag',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'',url:'https://soundcloud.com/agr1920/plain'},
+          // data-index=[4]
+          { ifs_prv:'<iframe width="560" height="315" src="https://www.youtube.com/embed/c7-H3YKpOVY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', ifs_time:'', ifs_date:'2020.07', ifs_event:'cover', ifs_album:'', ifs_track:'', ifs_title:'ディスコの神様 feat.藤井隆(ag Remix)', ifs_artist:'cover by倉先', ifs_sb01:'Music/Lyrics', ifs_colon01:'：', ifs_sb01_d:'tofubeats', ifs_sb02:'Original Vocal',ifs_colon02:'：', ifs_sb02_d:'藤井隆', ifs_sb03:'Mix', ifs_colon03:'：', ifs_sb03_d:'ag', ifs_sb04:'Vocal', ifs_colon04:'：', ifs_sb04_d:'倉先/kurasaki', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'https://soundcloud.com/k_saky/discogod_agremix'},
 
-		// data index 6
-		{preview:'<iframe width="560" height="315" src="https://www.youtube.com/embed/9NU74DIoYN8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',date:'2020.03',eventname:'Free DL',circle:'',subtitle:'',title:'White',artist:'ag feat.倉先',item01:'Music',item01_1:'：ag',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'',url:'https://soundcloud.com/agr1920/white'},
+          // data-index=[5]
+          { ifs_prv:'<iframe width="560" height="315" src="https://www.youtube.com/embed/btL2Vk75fss" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', ifs_time:'', ifs_date:'2020.06', ifs_event:'Free DL', ifs_album:'', ifs_track:'', ifs_title:'Plain', ifs_artist:'ag feat.倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'ag', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:'', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'https://soundcloud.com/agr1920/plain'},
 
-		// data index 7
-		{preview:'<iframe width="560" height="315" src="https://www.youtube.com/embed/1D-ZZbOxG24?start=97" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',date:'2020.03',eventname:'春M3',circle:'ZPPTRAX 新譜「partial recall」',subtitle:'Track3',title:'Party!! Party!! Party!!',artist:'good-cool feat.倉先',item01:'Music',item01_1:'：good-cool',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'※1:37〜2:25',url:'https://zpptrax-pr.tumblr.com/'},
+          // data-index=[6]
+          { ifs_prv:'<iframe width="560" height="315" src="https://www.youtube.com/embed/9NU74DIoYN8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', ifs_time:'', ifs_date:'2020.03', ifs_event:'Free DL', ifs_album:'', ifs_track:'', ifs_title:'White', ifs_artist:'ag feat.倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'ag', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:'', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'https://soundcloud.com/agr1920/white'},
 
-		// data index 8
-		{preview:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/761399878&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',date:'2020.03',eventname:'春M3',circle:'STRLabel 新譜「わくわくコンピ！」',subtitle:'Track1',title:'looking back',artist:'ag feat.倉先',item01:'Music',item01_1:'：ag',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'1:37〜2:25',url:'http://str3.org/wakuwaku/'},
+          // data-index=[7]
+          { ifs_prv:'<iframe width="560" height="315" src="https://www.youtube.com/embed/1D-ZZbOxG24" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', ifs_time:'※1:37〜2:25', ifs_date:'2020.03', ifs_event:'春M3', ifs_album:'ZPPTRAX 新譜「partial recall」', ifs_track:'Track3', ifs_title:'Party!! Party!! Party!!', ifs_artist:'good-cool feat.倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'Tatsuya Furukawa', ifs_sb02:'Lyrics',ifs_colon02:'：', ifs_sb02_d:'good-cool', ifs_sb03:'Vocal', ifs_colon03:'：', ifs_sb03_d:'倉先/kurasaki', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'https://zpptrax-pr.tumblr.com/'},
 
-		// data index 9
-		{preview:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/733783237&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',date:'2019.12.31',eventname:'冬コミ',circle:'Loquartz 新譜「STYLEY! vol.4」',subtitle:'Track2',title:'Girlfriend feat. 倉先',artist:'Shion Hinano',item01:'Music',item01_1:'：Shion Hinano',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'',url:'https://styley4.loquartz.com/'},
+          // data-index=[8]
+          { ifs_prv:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/761399878&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>', ifs_time:'', ifs_date:'2020.03', ifs_event:'春M3', ifs_album:'STRLabel 新譜「わくわくコンピ！」', ifs_track:'Track1', ifs_title:'looking back', ifs_artist:'ag feat.倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'ag', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:'', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'http://str3.org/wakuwaku/'},
 
-		// data index 10
-		{preview:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/730303708&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',date:'2019.12.31',eventname:'冬コミ',circle:'Kenichi Chiba | northtakt 新譜「CROSSPOINT」',subtitle:'Track8',title:'Midnight Sherry Feat.倉先',artist:'Kenichi Chiba',item01:'Music',item01_1:'：Chiba',item02:'LYRICS',item02_1:'：水崎うき',item03:'Vocal',item03_1:'：倉先 /kurasaki',item04:'',item04_1:'',item05:'',item05_1:'',small:'※3:48〜4:48',url:'https://northtakt-crosspoint.tumblr.com/'},
+          // data-index=[9]
+          { ifs_prv:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/733783237&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>', ifs_time:'', ifs_date:'2019.12.31', ifs_event:'冬コミ', ifs_album:'Loquartz 新譜「STYLEY! vol.4」', ifs_track:'Track2', ifs_title:'Girlfriend feat. 倉先', ifs_artist:'Shion Hinano', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'Shion Hinano', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:'', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'https://styley4.loquartz.com/'},
 
-		// data index 11
-		{preview:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/697824346&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',date:'2019.10.27',eventname:'秋M3',circle:'ミズノヨウ 新譜「真夏の太陽ep」',subtitle:'Track1',title:'真夏の太陽 feat.倉先',artist:'ミズノヨウ/mizunoyoh',item01:'Music',item01_1:'：ミズノヨウ/mizunoyoh',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item05:'',item05_1:'',item04_1:'',small:'',url:'https://twitter.com/mizunoyoh'},
+          // data-index=[10]
+          { ifs_prv:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/730303708&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>', ifs_time:'※3:48〜4:48', ifs_date:'2019.12.31', ifs_event:'冬コミ', ifs_album:'Kenichi Chiba | northtakt 新譜「CROSSPOINT」', ifs_track:'Track8', ifs_title:'Midnight Sherry Feat.倉先', ifs_artist:'Kenichi Chiba', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'Kenichi Chiba', ifs_sb02:'Lyrics',ifs_colon02:'：', ifs_sb02_d:'水崎うき', ifs_sb03:'Vocal', ifs_colon03:'：', ifs_sb03_d:'倉先/kurasaki', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'https://northtakt-crosspoint.tumblr.com/'},
 
-		// data index 12
-		{preview:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/660456668&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',date:'2019.08.12',eventname:'夏コミ',circle:'Loquartz 新譜「STYLEY! vol.3」',subtitle:'Track2',title:'ダメって言えないの (feat.倉先)',artist:'Shion Hinano',item01:'Music',item01_1:'：Shion Hinano',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item05:'',item05_1:'',item04_1:'',small:'※0:48〜1:34',url:'styley3.loquartz.com'},
+          // data-index=[11]
+          { ifs_prv:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/697824346&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>', ifs_time:'', ifs_date:'2019.10.27', ifs_event:'秋M3', ifs_album:'ミズノヨウ 新譜「真夏の太陽ep」', ifs_track:'Track1', ifs_title:'真夏の太陽 feat.倉先', ifs_artist:'ミズノヨウ/mizunoyoh', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'ミズノヨウ/mizunoyoh', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:'', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'https://twitter.com/mizunoyoh'},
 
-		// data index 13
-		{preview:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/659524820&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',date:'2019.08.12',eventname:'夏コミ',circle:'Diverse System 新譜「AD:HOUSE7」',subtitle:'Disc1-Track2',title:'Float',artist:'ag feat.倉先',item01:'Music',item01_1:'：ag',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'※0:48〜1:34',url:'adh7.diverse.jp'},
+          // data-index=[12]
+          { ifs_prv:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/660456668&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>', ifs_time:'※0:48〜1:34', ifs_date:'2019.08.12', ifs_event:'夏コミ', ifs_album:'Loquartz 新譜「STYLEY! vol.3」', ifs_track:'Track2', ifs_title:'ダメって言えないの (feat.倉先)', ifs_artist:'Shion Hinano', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'Shion Hinano', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:'', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'styley3.loquartz.com'},
 
-		// data index 14
-		{preview:'<iframe width="560" height="315" src="https://www.youtube.com/embed/TSzJ0JFj-tA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',date:'2019.07',eventname:'cover',circle:'',subtitle:'',title:'ROUTE 23',artist:'cover by倉先',item01:'Music',item01_1:'：パトリチェフ',item02:'Original Vocal',item02_1:'：鏡音リン',item03:'Mix',item03_1:'：むつえもん',item04:'Vocal',item04_1:'：倉先 /kurasaki',item05:'',item05_1:'',small:'',url:'https://youtu.be/ix9TZoc5Nao'},
+          // data-index=[13]
+          { ifs_prv:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/659524820&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>', ifs_time:'', ifs_date:'2019.08.12', ifs_event:'夏コミ', ifs_album:'Diverse System 新譜「AD:HOUSE7」', ifs_track:'Disc1-Track2', ifs_title:'Float', ifs_artist:'ag feat.倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'ag', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:'', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'adh7.diverse.jp'},
 
-		// data index 15
-		{preview:'<iframe width="560" height="315" src="https://www.youtube.com/embed/DIm7wDn80kQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',date:'2019.06',eventname:'cover',circle:'',subtitle:'',title:'6900000000',artist:'cover by倉先',item01:'Music',item01_1:'：kyotn',item02:'LYRICS',item02_1:'：HAMO',item03:'Original Vocal',item03_1:'：初音ミク',item04:'Mix',item04_1:'：うまい棒じじい',item05:'Vocal',item05_1:'：倉先 /kurasaki',small:'',url:'https://www.nicovideo.jp/watch/sm13380008'},
+          // data-index=[14]
+          { ifs_prv:'<iframe width="560" height="315" src="https://www.youtube.com/embed/TSzJ0JFj-tA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', ifs_time:'', ifs_date:'2019.07', ifs_event:'cover', ifs_album:'', ifs_track:'', ifs_title:'ROUTE 23', ifs_artist:'cover by倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'パトリチェフ', ifs_sb02:'Original Vocal',ifs_colon02:'：', ifs_sb02_d:'鏡音リン', ifs_sb03:'Mix', ifs_colon03:'：', ifs_sb03_d:'むつえもん', ifs_sb04:'Vocal', ifs_colon04:'：', ifs_sb04_d:'倉先/kurasaki', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'https://youtu.be/ix9TZoc5Nao'},
 
-		// data index 16
-		{preview:'<iframe width="560" height="315" src="https://www.youtube.com/embed/917OglIN6h0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',date:'2019.06',eventname:'',circle:'',subtitle:'',title:'不器用な真実 feat.倉先',artist:'カニカンズ',item01:'Music',item01_1:'：MICHIHIKO SATO',item02:'WORDS',item02_1:'：MICHIHIKO SATO',item03:'Vocal',item03_1:'：倉先 /kurasaki',item04:'',item04_1:'',item05:'',item05_1:'',small:'',url:'https://twitter.com/kanicans'},
+          // data-index=[15]
+          { ifs_prv:'<iframe width="560" height="315" src="https://www.youtube.com/embed/DIm7wDn80kQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', ifs_time:'', ifs_date:'2019.06', ifs_event:'cover', ifs_album:'', ifs_track:'', ifs_title:'6900000000', ifs_artist:'cover by倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'kyotn', ifs_sb02:'Lyrics',ifs_colon02:'：', ifs_sb02_d:'HAMO', ifs_sb03:'Original Vocal', ifs_colon03:'：', ifs_sb03_d:'初音ミク', ifs_sb04:'Mix', ifs_colon04:'：', ifs_sb04_d:'うまい棒じじい', ifs_sb05:'Vocal', ifs_colon05:'：', ifs_sb05_d:'倉先/kurasaki',ifs_url:'https://www.nicovideo.jp/watch/sm13380008'},
 
-		// data index 17
-		{preview:'<iframe width="560" height="315" src="https://www.youtube.com/embed/kfxdNaYeclA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',date:'2019.05',eventname:'cover',circle:'',subtitle:'',title:'花火(ag Remix)',artist:'cover by倉先',item01:'Music',item01_1:'：aiko',item02:'LYRICS',item02_1:'：aiko',item03:'Original Vocal',item03_1:'：aiko',item04:'Mix',item04_1:'：ag',item05:'Vocal',item05_1:'：倉先 /kurasaki',small:'',url:'https://soundcloud.com/k_saky/hanabi_agremix'},
+          // data-index=[16]
+          { ifs_prv:'<iframe width="560" height="315" src="https://www.youtube.com/embed/917OglIN6h0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', ifs_time:'', ifs_date:'2019.06', ifs_event:'', ifs_album:'', ifs_track:'', ifs_title:'不器用な真実 feat.倉先', ifs_artist:'カニカンズ', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'MICHIHIKO SATO', ifs_sb02:'Words',ifs_colon02:'：', ifs_sb02_d:'MICHIHIKO SATO', ifs_sb03:'Vocal', ifs_colon03:'：', ifs_sb03_d:'倉先/kurasaki', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'https://twitter.com/kanicans'},
 
-		// data index 18
-		{preview:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/607336176&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',date:'2019.04.28',eventname:'春M3',circle:'STRLabel 新譜「PRISM」',subtitle:'Track5',title:'Sigh',artist:'ag feat.倉先',item01:'Music',item01_1:'：ag',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'',url:'http://str3.org/prism/'},
+          // data-index=[17]
+          { ifs_prv:'<iframe width="560" height="315" src="https://www.youtube.com/embed/kfxdNaYeclA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', ifs_time:'', ifs_date:'2019.05', ifs_event:'cover', ifs_album:'', ifs_track:'', ifs_title:'花火(ag Remix)', ifs_artist:'cover by倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'aiko', ifs_sb02:'Lyrics',ifs_colon02:'：', ifs_sb02_d:'aiko', ifs_sb03:'Original Vocal', ifs_colon03:'：', ifs_sb03_d:'aiko', ifs_sb04:'Mix', ifs_colon04:'：', ifs_sb04_d:'ag', ifs_sb05:'Vocal', ifs_colon05:'：', ifs_sb05_d:'倉先/kurasaki',ifs_url:'https://soundcloud.com/k_saky/hanabi_agremix'},
 
-		// data index 19
-		{preview:'<iframe width="560" height="315" src="https://www.youtube.com/embed/-0gai5A7dAQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',date:'2019.02',eventname:'音楽ゲーム公募',circle:'',subtitle:'',title:'all night',artist:'ag feat.倉先',item01:'Music',item01_1:'：ag',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'',url:'https://soundcloud.com/agr1920/allnight'},
+          // data-index=[18]
+          { ifs_prv:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/607336176&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>', ifs_time:'', ifs_date:'2019.04.28', ifs_event:'春M3', ifs_album:'STRLabel 新譜「PRISM」', ifs_track:'Track5', ifs_title:'Sigh', ifs_artist:'ag feat.倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'ag', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:' ', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'http://str3.org/prism/'},
 
-		// data index 20
-		{preview:'<iframe width="560" height="315" src="https://www.youtube.com/embed/r-zLdL6Xgo4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',date:'2019.02',eventname:'cover',circle:'',subtitle:'',title:'恋はみずいろ(ClothedMusic Soul Mix)',artist:'cover by倉先',item01:'TVアニメ',item01_1:'「アマガミSS」',item02:'ARTIST',item02_1:'：七咲逢 (cv ゆかな)',item03:'MIX/Mastering',item03_1:'：Clothed Music',item04:'Vocal',item04_1:'：倉先 /kurasaki',item05:'',item05_1:'',small:'',url:'https://soundcloud.com/k_saky/lib_clothedmusicremix'},
+          // data-index=[19]
+          { ifs_prv:'<iframe width="560" height="315" src="https://www.youtube.com/embed/-0gai5A7dAQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', ifs_time:'', ifs_date:'2019.02', ifs_event:'音楽ゲーム公募', ifs_album:'', ifs_track:'', ifs_title:'all night', ifs_artist:'ag feat.倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'ag', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:' ', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'https://soundcloud.com/agr1920/allnight'},
 
-		// data index 21
-		{preview:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/587796195&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',date:'2018.12.30',eventname:'冬コミ',circle:'G-C VIBES 新譜「good-cool fabulous housekeeper」',subtitle:'Track11',title:'Baby Maybe',artist:'good-cool',item01:'Music',item01_1:'：good-cool',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'',url:'https://twitter.com/goood_coool'},
+          // data-index=[20]
+          { ifs_prv:'<iframe width="560" height="315" src="https://www.youtube.com/embed/r-zLdL6Xgo4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', ifs_time:'', ifs_date:'2019.02', ifs_event:'cover', ifs_album:'', ifs_track:'', ifs_title:'恋はみずいろ(ClothedMusic Soul Mix)', ifs_artist:'cover by倉先', ifs_sb01:'TVアニメ', ifs_colon01:'：', ifs_sb01_d:'「アマガミSS」', ifs_sb02:'Artist',ifs_colon02:'：', ifs_sb02_d:'七咲逢 (cv ゆかな)', ifs_sb03:'Mix/Mastering', ifs_colon03:'：', ifs_sb03_d:'Clothed Music', ifs_sb04:'Vocal', ifs_colon04:'：', ifs_sb04_d:'倉先/kurasaki', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'https://soundcloud.com/k_saky/lib_clothedmusicremix'},
 
-		// data index 22
-		{preview:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/547635252&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',date:'2018.12.30',eventname:'冬コミ',circle:'Yamajet | double caret 新譜「ホムパリピ！」',subtitle:'Track7',title:'Whenever will be (Yamajet Remix)',artist:'ag feat.倉先',item01:'Music',item01_1:'：ag',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'',url:'https://homuparipi.tumblr.com/'},
+          // data-index=[21]
+          { ifs_prv:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/587796195&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>', ifs_time:'', ifs_date:'2018.12.30', ifs_event:'冬コミ', ifs_album:'G-C VIBES 新譜「good-cool fabulous housekeeper」', ifs_track:'Track11', ifs_title:'Baby Maybe', ifs_artist:'good-cool', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'good-cool', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:'', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'https://soundcloud.com/good-cool-174525140/fabulous-housekeeper'},
 
-		// data index 23
-		{preview:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/544282317&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',date:'2018.12.30',eventname:'冬コミ',circle:'Yamajet | double caret 新譜「ホムパリピ！」',subtitle:'Track2',title:'Whenever will be',artist:'ag feat.倉先',item01:'Music',item01_1:'：ag',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'',url:'https://homuparipi.tumblr.com/'},
+          // data-index=[22]
+          { ifs_prv:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/544282317&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>', ifs_time:'', ifs_date:'2018.12.30', ifs_event:'冬コミ', ifs_album:'Yamajet | double caret 新譜「ホムパリピ！」', ifs_track:'Track2', ifs_title:'Whenever will be', ifs_artist:'ag feat.倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'ag', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:'', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'https://homuparipi.tumblr.com/'},
 
-		// data index 24
-		{preview:'<iframe width="560" height="315" src="https://www.youtube.com/embed/PWQlJNt9XK4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',date:'2018.11',eventname:'cover',circle:'',subtitle:'',title:'太陽の接吻(ag Remix)',artist:'cover by倉先',item01:'Music',item01_1:'：ag',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'',url:'https://soundcloud.com/k_saky/withthekissofsun_agremix'},
+          // data-index=[23]
+          { ifs_prv:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/547635252&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>', ifs_time:'', ifs_date:'2018.12.30', ifs_event:'冬コミ', ifs_album:'Yamajet | double caret 新譜「ホムパリピ！」', ifs_track:'Track7', ifs_title:'Whenever will be (Yamajet Remix)', ifs_artist:'ag feat.倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'ag', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:'', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'https://homuparipi.tumblr.com/'},
 
-		// data index 25
-		{preview:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/517811394&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',date:'2018.12.30',eventname:'秋M3',circle:'Loquartz 新譜「STYLEY! vol.2」',subtitle:'Track2',title:'All Night (feat.倉先)',artist:'Shion Hinano',item01:'Music',item01_1:'：Shion Hinano',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'',url:'http://loquartz.com/release/lqaz0005/'},
+          // data-index=[24]
+          { ifs_prv:'<iframe width="560" height="315" src="https://www.youtube.com/embed/PWQlJNt9XK4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', ifs_time:'', ifs_date:'2018.11', ifs_event:'cover', ifs_album:'', ifs_track:'', ifs_title:'太陽の接吻(ag Remix)', ifs_artist:'cover by倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'paris match', ifs_sb02:'Original Vocal',ifs_colon02:'：', ifs_sb02_d:'paris match', ifs_sb03:'Mix', ifs_colon03:'：', ifs_sb03_d:'ag', ifs_sb04:'Vocal', ifs_colon04:'：', ifs_sb04_d:'倉先/kurasaki', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'https://soundcloud.com/k_saky/withthekissofsun_agremix'},
 
-		// data index 26
-		{preview:'<iframe width="560" height="315" src="https://www.youtube.com/embed/scSsfcedWkw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',date:'2018.08',eventname:'cover',circle:'',subtitle:'',title:'ナーヴ・インパルス',artist:'cover by倉先',item01:'Music',item01_1:'：ポリスピカデリー',item02:'Original Vocal',item02_1:'：闇音レンリ',item03:'Mix',item03_1:'：でいもん',item04:'Vocal',item04_1:'：倉先 /kurasaki',item05:'',item05_1:'',small:'',url:'https://youtu.be/v6GIH5VIQbo'},
+          // data-index=[25]
+          { ifs_prv:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/517811394&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>', ifs_time:'', ifs_date:'2018.10.28', ifs_event:'秋M3', ifs_album:'Loquartz 新譜「STYLEY! vol.2」', ifs_track:'Track2', ifs_title:'All Night (feat.倉先)', ifs_artist:'Shion Hinano', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'Shion Hinano', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:'', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'http://loquartz.com/release/lqaz0005/'},
 
-		// data index 27
-		{preview:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/480593043&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',date:'2018.08.10',eventname:'夏コミ',circle:'Diverse System 新譜「Colors -AD:HOUSE VOCAL REMIXES-」',subtitle:'Track7',title:'Shine (Scarfaith Remix)',artist:'ag feat. 倉先 remixed by Scarfaith',item01:'Music',item01_1:'：ag',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'',url:'http://colors.diverse.jp/'},
+          // data-index=[26]
+          { ifs_prv:'<iframe width="560" height="315" src="https://www.youtube.com/embed/scSsfcedWkw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', ifs_time:'', ifs_date:'2018.08', ifs_event:'cover', ifs_album:'', ifs_track:'', ifs_title:'ナーヴ・インパルス', ifs_artist:'cover by倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'ポリスピカデリー', ifs_sb02:'Original Vocal',ifs_colon02:'：', ifs_sb02_d:'闇音レンリ', ifs_sb03:'Mix', ifs_colon03:'：', ifs_sb03_d:'でいもん', ifs_sb04:'Vocal', ifs_colon04:'：', ifs_sb04_d:'倉先/kurasaki', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'https://youtu.be/v6GIH5VIQbo'},
 
-		// data index 28
-		{preview:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/479661543&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',date:'2018.08.10',eventname:'夏コミ',circle:'Diverse System 新譜「Clearly - AD:HOUSE BEST -」',subtitle:'Disc1-Track2',title:'Count on you',artist:'ag feat.倉先',item01:'Music',item01_1:'：ag',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'',url:'http://clearly.diverse.jp/'},
+          // data-index=[27]
+          { ifs_prv:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/480593043&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>', ifs_time:'', ifs_date:'2018.08.10', ifs_event:'夏コミ', ifs_album:'Diverse System 新譜「Colors -AD:HOUSE VOCAL REMIXES-」', ifs_track:'Track7', ifs_title:'Shine (Scarfaith Remix)', ifs_artist:'ag feat. 倉先 remixed by Scarfaith', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'ag', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:'', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'http://colors.diverse.jp/'},
 
-		// data index 29
-		{preview:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/434417727&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',date:'2018.04.29',eventname:'春M3',circle:'Loquartz 新譜「STYLEY! 」',subtitle:'Track3',title:'Cutely Girlish Weekend (feat.倉先)',artist:'Shion Hinano',item01:'Music',item01_1:'：Shion Hinano',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'',url:'https://loquartz.com/release/lqaz0003/'},
+          // data-index=[28]
+          { ifs_prv:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/479661543&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>', ifs_time:'', ifs_date:'2018.08.10', ifs_event:'夏コミ', ifs_album:'Diverse System 新譜「Clearly - AD:HOUSE BEST -」', ifs_track:'Disc1-Track2', ifs_title:'Count on you', ifs_artist:'ag feat.倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'ag', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:'', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'http://clearly.diverse.jp/'},
 
-		// data index 30
-		{preview:'<iframe width="560" height="315" src="https://www.youtube.com/embed/_dHAj_k6cjM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',date:'2018.02',eventname:'cover',circle:'',subtitle:'',title:'エンゼルフィッシュ',artist:'cover by倉先',item01:'MUSIC',item01_1:'：パトリチェフ',item02:'Original Vocal',item02_1:'：鏡音リン',item03:'Mix',item03_1:'：倉先/kurasaki',item04:'Vocal',item04_1:'：倉先 /kurasaki',item05:'Special thanx!',item05_1:'：つよしん',small:'',url:'http://www.nicovideo.jp/watch/sm21436114'},
+          // data-index=[29]
+          { ifs_prv:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/434417727&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>', ifs_time:'', ifs_date:'2018.04.29', ifs_event:'春M3', ifs_album:'Loquartz 新譜「STYLEY! 」', ifs_track:'Track3', ifs_title:'Cutely Girlish Weekend (feat.倉先)', ifs_artist:'Shion Hinano', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'Shion Hinano', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:'', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'https://loquartz.com/release/lqaz0003/'},
 
-		// data index 31
-		{preview:'<iframe width="560" height="315" src="https://www.youtube.com/embed/Xjf48VjYp-A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',date:'2017.12',eventname:'cover',circle:'',subtitle:'',title:'エンゼルフィッシュ(ag Remix)',artist:'cover by倉先/kurasaki',item01:'Music',item01_1:'：パトリチェフ',item02:'Original Vocal',item02_1:'：EVO+',item03:'Mix',item03_1:'：ag',item04:'Vocal',item04_1:'：倉先 /kurasaki',item05:'',item05_1:'',small:'',url:'evolution.extsm.com/'},
+          // data-index=[30]
+          { ifs_prv:'<iframe width="560" height="315" src="https://www.youtube.com/embed/_dHAj_k6cjM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', ifs_time:'', ifs_date:'2018.02', ifs_event:'cover', ifs_album:'', ifs_track:'', ifs_title:'エンゼルフィッシュ', ifs_artist:'cover by倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'パトリチェフ', ifs_sb02:'Original Vocal',ifs_colon02:'：', ifs_sb02_d:'鏡音リン', ifs_sb03:'Mix/Vocal', ifs_colon03:'：', ifs_sb03_d:'倉先/kurasaki', ifs_sb04:'Special thanx!', ifs_colon04:'：', ifs_sb04_d:'つよしん', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'http://www.nicovideo.jp/watch/sm21436114'},
 
-		// data index 32
-		{preview:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/346076417&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',date:'2017.10',eventname:'Free DL',circle:'',subtitle:'',title:'Forever and Ever',artist:'ag feat.倉先',item01:'Music',item01_1:'：ag',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'',url:'http://nico.ms/sm32078752'},
+          // data-index=[31]
+          { ifs_prv:'<iframe width="560" height="315" src="https://www.youtube.com/embed/Xjf48VjYp-A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', ifs_time:'', ifs_date:'2017.12', ifs_event:'cover', ifs_album:'', ifs_track:'', ifs_title:'エンゼルフィッシュ(ag Remix)', ifs_artist:'cover by倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'パトリチェフ', ifs_sb02:'Original Vocal',ifs_colon02:'：', ifs_sb02_d:'EVO+', ifs_sb03:'Mix', ifs_colon03:'：', ifs_sb03_d:'ag', ifs_sb04:'Vocal', ifs_colon04:'：', ifs_sb04_d:'倉先/kurasaki', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'evolution.extsm.com/'},
 
-		// data index 33
-		{preview:'<iframe width="560" height="315" src="https://www.youtube.com/embed/vmgyJ8im9rA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',date:'2017.08',eventname:'cover',circle:'',subtitle:'',title:'妄想感傷代償連盟',artist:'cover by倉先',item01:'Music',item01_1:'：DECO*27',item02:'Original Vocal',item02_1:'：初音ミク',item03:'Mix',item03_1:'：Enigma',item04:'Vocal',item04_1:'：倉先 /kurasaki',item05:'',item05_1:'',small:'',url:'http://www.nicovideo.jp/watch/sm30067009'},
+          // data-index=[32]
+          { ifs_prv:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/346076417&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>', ifs_time:'', ifs_date:'2017.10', ifs_event:'Free DL', ifs_album:'', ifs_track:'', ifs_title:'Forever and Ever', ifs_artist:'ag feat.倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'ag', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:'', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'http://nico.ms/sm32078752'},
 
-		// data index 34
-		{preview:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/336709943&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',date:'2017.08.11',eventname:'夏コミ',circle:'Diverse System 新譜「AD:HOUSE 6」',subtitle:'Disc1-Track4',title:'Shine',artist:'ag feat.倉先',item01:'Music',item01_1:'：ag',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'',url:'http://adh6.diverse.jp/'},
+          // data-index=[33]
+          { ifs_prv:'<iframe width="560" height="315" src="https://www.youtube.com/embed/vmgyJ8im9rA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', ifs_time:'', ifs_date:'2017.08', ifs_event:'cover', ifs_album:'', ifs_track:'', ifs_title:'妄想感傷代償連盟', ifs_artist:'cover by倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'DECO*27', ifs_sb02:'Original Vocal',ifs_colon02:'：', ifs_sb02_d:'初音ミク', ifs_sb03:'Mix', ifs_colon03:'：', ifs_sb03_d:'Enigma', ifs_sb04:'Vocal', ifs_colon04:'：', ifs_sb04_d:'倉先/kurasaki', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'http://www.nicovideo.jp/watch/sm30067009'},
 
-		// data index 35
-		{preview:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/319079437&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',date:'2017.04.30',eventname:'春M3',circle:'Lick Dom Records & Neutrinique 新譜「Honey Cheeks 2 -Purple Dress- 」',subtitle:'Track2',title:'One Day',artist:'ag feat.倉先',item01:'Music',item01_1:'：ag',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'',url:'http://c-show.jp/RGLD-002/'},
+          // data-index=[34]
+          { ifs_prv:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/336709943&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>', ifs_time:'', ifs_date:'2017.08.11', ifs_event:'夏コミ', ifs_album:'Diverse System 新譜「AD:HOUSE 6」', ifs_track:'Disc1-Track4', ifs_title:'Shine', ifs_artist:'ag feat.倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'ag', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:'', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'http://adh6.diverse.jp/'},
 
-		// data index 36
-		{preview:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/286689579&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',date:'2016.10.30',eventname:'秋M3',circle:'Swingrooves 新譜「the next little step」',subtitle:'Track2',title:'brand new world',artist:'ag feat.倉先',item01:'Words',item01_1:'：ag',item02:'composed',item02_1:'：ag',item03:'Programming',item03_1:'：Clothed Music',item04:'arrange/Mix',item04_1:'：Clothed Music',item05:'Vocal',item05_1:'：倉先 /kurasaki',small:'※0:29〜1:04',url:'http://swingrooves.com/thenextlittlestep'},
+          // data-index=[35]
+          { ifs_prv:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/319079437&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>', ifs_time:'', ifs_date:'2017.04.30', ifs_event:'春M3', ifs_album:'Lick Dom Records & Neutrinique 新譜「Honey Cheeks 2 -Purple Dress- 」', ifs_track:'Track2', ifs_title:'One Day', ifs_artist:'ag feat.倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'ag', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:'', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'http://c-show.jp/RGLD-002/'},
 
-		// data index 37
-		{preview:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276797296&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',date:'2016.08.14',eventname:'夏コミ',circle:'Diverse System 新譜「AD:HOUSE 5」',subtitle:'Disc1-Track3',title:'Starlight',artist:'ag feat.倉先',item01:'Music',item01_1:'：ag',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'',url:'http://adh5.diverse.jp'},
+          // data-index=[36]
+          { ifs_prv:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/286689579&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>', ifs_time:'※0:29〜1:04', ifs_date:'2016.10.30', ifs_event:'秋M3', ifs_album:'Swingrooves 新譜「the next little step」', ifs_track:'Track2', ifs_title:'brand new world', ifs_artist:'ag feat.倉先', ifs_sb01:'Words/composed', ifs_colon01:'：', ifs_sb01_d:'ag', ifs_sb02:'Programming',ifs_colon02:'：', ifs_sb02_d:'Clothed Music', ifs_sb03:'Arrange/Mix', ifs_colon03:'：', ifs_sb03_d:'Clothed Music', ifs_sb04:'Vocal', ifs_colon04:'：', ifs_sb04_d:'倉先/kurasaki', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'http://swingrooves.com/thenextlittlestep'},
 
-		// data index 38
-		{preview:'<iframe width="560" height="315" src="https://www.youtube.com/embed/XhVChRVzUaY?start=89" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',date:'2016.04.24',eventname:'春M3',circle:'Swingrooves 新譜「The Beginning」',subtitle:'Disc2(ag Re:Define)-Track2',title:'I Can Be Myself feat.倉先',artist:'ag',item01:'Music',item01_1:'：ag',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'',url:'http://swingrooves.com/thebeginning'},
+          // data-index=[37]
+          { ifs_prv:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276797296&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>', ifs_time:'', ifs_date:'2016.08.14', ifs_event:'夏コミ', ifs_album:'Diverse System 新譜「AD:HOUSE 5」', ifs_track:'Disc1-Track3', ifs_title:'Starlight', ifs_artist:'ag feat.倉先', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'ag', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:'', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'http://adh5.diverse.jp'},
 
-		// data index 39
-		{preview:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/218352519&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',date:'2015.08.15',eventname:'夏コミ',circle:'Diverse System 新譜「AD:HOUSE 4」',subtitle:'Disc2-Track7',title:'Follow Me',artist:'ag feat.倉先',item01:'Music',item01_1:'：ag',item02:'Vocal',item02_1:'：倉先 /kurasaki',item03:'',item03_1:'',item04:'',item04_1:'',item05:'',item05_1:'',small:'',url:'http://adh4.diverse.jp/'},
+          // data-index=[38]
+          { ifs_prv:'<iframe width="560" height="315" src="https://www.youtube.com/embed/XhVChRVzUaY?start=89" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', ifs_time:'', ifs_date:'2016.04.24', ifs_event:'春M3', ifs_album:'Swingrooves 新譜「The Beginning」', ifs_track:'Disc2(ag Re:Define)-Track2', ifs_title:'I Can Be Myself feat.倉先', ifs_artist:'ag', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'ag', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:'', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'http://swingrooves.com/thebeginning'},
+
+          // data-index=[39]
+          { ifs_prv:'<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/218352519&color=%2364544c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>', ifs_time:'', ifs_date:'2015.08.15', ifs_event:'夏コミ', ifs_album:'Diverse System 新譜「AD:HOUSE 4」', ifs_track:'Disc2-Track7', ifs_title:'Follow Me', ifs_artist:'ag', ifs_sb01:'Music', ifs_colon01:'：', ifs_sb01_d:'ag', ifs_sb02:'Vocal',ifs_colon02:'：', ifs_sb02_d:'倉先/kurasaki', ifs_sb03:'', ifs_colon03:'', ifs_sb03_d:'', ifs_sb04:'', ifs_colon04:'', ifs_sb04_d:'', ifs_sb05:'', ifs_colon05:'', ifs_sb05_d:'',ifs_url:'http://adh4.diverse.jp/'},
+
+        ];
 
 
-	];
-
-	
 
 
+        
+        const li_idx = $(this).data('index');
+        $('.overlayer .ifs_prv').html(infos[li_idx].ifs_prv);
+        $('.overlayer .ifs_time').text(infos[li_idx].ifs_time);
+        $('.overlayer .ifs_date').text(infos[li_idx].ifs_date);
+        $('.overlayer .ifs_event').text(infos[li_idx].ifs_event);
+        $('.overlayer .ifs_album').text(infos[li_idx].ifs_album);
+        $('.overlayer .ifs_track').text(infos[li_idx].ifs_track);
+        $('.overlayer .ifs_title').text(infos[li_idx].ifs_title);
+        $('.overlayer .ifs_artist').text(infos[li_idx].ifs_artist);
+        $('.overlayer .ifs_sb01').text(infos[li_idx].ifs_sb01);
+        $('.overlayer .ifs_colon01').text(infos[li_idx].ifs_colon01);
+        $('.overlayer .ifs_sb01_d').text(infos[li_idx].ifs_sb01_d);
+        $('.overlayer .ifs_sb02').text(infos[li_idx].ifs_sb02);
+        $('.overlayer .ifs_colon02').text(infos[li_idx].ifs_colon02);
+        $('.overlayer .ifs_sb02_d').text(infos[li_idx].ifs_sb02_d);
+        $('.overlayer .ifs_sb03').text(infos[li_idx].ifs_sb03);
+        $('.overlayer .ifs_colon03').text(infos[li_idx].ifs_colon03);
+        $('.overlayer .ifs_sb03_d').text(infos[li_idx].ifs_sb03_d);
+        $('.overlayer .ifs_sb04').text(infos[li_idx].ifs_sb04);
+        $('.overlayer .ifs_colon04').text(infos[li_idx].ifs_colon04);
+        $('.overlayer .ifs_sb04_d').text(infos[li_idx].ifs_sb04_d);
+        $('.overlayer .ifs_sb05').text(infos[li_idx].ifs_sb05);
+        $('.overlayer .ifs_colon05').text(infos[li_idx].ifs_colon05);
+        $('.overlayer .ifs_sb05_d').text(infos[li_idx].ifs_sb05_d);
+        $('.overlayer .ifs_url').attr('href',infos[li_idx].ifs_url);
 
-	$('.JS_Click_Trigger').on('click', function(){
 
-		const titleArray = $(this).data('index');
-			$('.wrapper .youtube').html(infos[titleArray].preview);
-			$('.wrapper .movtext .date').text(infos[titleArray].date);
-			$('.wrapper .movtext .eventname').text(infos[titleArray].eventname);
-			$('.wrapper .movtext .circle').text(infos[titleArray].circle);
-			$('.wrapper .movtext .subtitle').text(infos[titleArray].subtitle);
-			$('.wrapper .movtext .title').text(infos[titleArray].title);
-			$('.wrapper .movtext .artist').text(infos[titleArray].artist);
-			$('.wrapper .movtext .item01').text(infos[titleArray].item01);
-			$('.wrapper .movtext .item01_1').text(infos[titleArray].item01_1);
-			$('.wrapper .movtext .item02').text(infos[titleArray].item02);
-			$('.wrapper .movtext .item02_1').text(infos[titleArray].item02_1);
-			$('.wrapper .movtext .item03').text(infos[titleArray].item03);
-			$('.wrapper .movtext .item03_1').text(infos[titleArray].item03_1);
-			$('.wrapper .movtext .item04').text(infos[titleArray].item04);
-			$('.wrapper .movtext .item04_1').text(infos[titleArray].item04_1);
-			$('.wrapper .movtext .item05').text(infos[titleArray].item05);
-			$('.wrapper .movtext .item05_1').text(infos[titleArray].item05_1);
-			$('.wrapper .mov .small').text(infos[titleArray].small);
-			$('.wrapper .movtext .button').attr("href",infos[titleArray].url);
 
-			$('.OverLayer').addClass('isShow');
-			$('body').css({overflow: 'hidden'});
-	});
 
-	$('.OverLayer-Mask').on('click', function(){
-		$('.OverLayer').removeClass('isShow');
-		
-		$('body').css({overflow: ''});
-	});
-		
-	
-//	トップにゆっくり戻る
-	const topBtn = $('#page_top')
-	
-	topBtn.click(function(){
-		$('body,html').animate({
-			scrollTop: 0
-		},500);
-	});
 
-	
-//	プロフィールにゆっくり移動
-	let position = $('#Profile').offset().top;
-	
-	$('#prf').click(function(){
-		$('body,html').animate({
-			scrollTop: position
-		},500);
-	});
-	
-//	ワークスにゆっくり移動
-	let position2 = $('#Works').offset().top;
-	
-	$('#wks').click(function(){
-		$('body,html').animate({
-			scrollTop: position2
-		},500);
-	});
-	
-//	ディスコグラフィにゆっくり移動
-	let position3 = $('#Discography').offset().top;
-	
-	$('#dsc').click(function(){
-		$('body,html').animate({
-			scrollTop: position3
-		},500);
-	});
+      });
 
+
+
+
+
+      // オーバーレイ設定
+      // -------------------------------------------
+      // ■ 表示する
+      $('.JS_click_Trigger').on('click', function(){
+        $('.overlayer').addClass('isShow');
+        $('body').css('overflow','hidden');
+      });
+
+      // ■ 隠す
+      $('.ol-mask').on('click', function(){
+        $('.overlayer').removeClass('isShow');
+        $('body').css('overflow','');
+      });
+
+
+
+      // メニュースクロール設定
+      // -------------------------------------------
+      const adjust = -20;
+      let D_pst =$('#Discography').offset().top +adjust;
+      let W_pst =$('#Works').offset().top +adjust;
+      let A_pst =$('#About').offset().top +adjust;
+
+      // ■ TOPへゆっくり移動させる
+      $('#page_top').on('click',function(){
+        $('body,html').animate({
+          scrollTop:0 },500);
+      });
+
+      // Discographyへゆっくり移動させる
+
+      $('#dsc').on('click',function(){
+        $('body,html').animate({scrollTop:D_pst},500);
+      });
+
+      // ■ Worksへゆっくり移動させる
+
+      $('#wks').on('click',function(){
+        $('body,html').animate({scrollTop:W_pst},500);
+      });
+
+      // ■ Aboutへゆっくり移動させる
+
+      $('#abt').on('click',function(){
+        $('body,html').animate({scrollTop:A_pst},500);
+      });
+
+            // リサイズされたときの処理
+      // -------------------------------------------
+      $(window).on('resize',function(){
+        D_pst =$('#Discography').offset().top +adjust;
+        W_pst =$('#Works').offset().top +adjust;
+        A_pst =$('#About').offset().top +adjust;
+      });
+
+      // -------------------------------------------
 
 });
-
-
-
-
