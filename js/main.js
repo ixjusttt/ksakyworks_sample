@@ -172,13 +172,13 @@ $(function(){
       // ■ 表示する
       $('.JS_click_Trigger').on('click', function(){
         $('.overlayer').addClass('isShow');
-        $('body').css('overflow','hidden');
+        $('body,html').css('overflow','hidden');
       });
 
       // ■ 隠す
       $('.ol-mask').on('click', function(){
         $('.overlayer').removeClass('isShow');
-        $('body').css('overflow','');
+        $('body,html').css('overflow','');
       });
 
 
